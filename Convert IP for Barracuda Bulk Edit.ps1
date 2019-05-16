@@ -121,7 +121,7 @@ $CIDR = Import-Csv -Path $fullimport | Select-Object CIDR,IP | ForEach-Object{
   
 # Output file to destination path
 
- $IP | Out-File $fullexport  
+ $IP | Out-File -Append $fullexport  
 
 }
   
