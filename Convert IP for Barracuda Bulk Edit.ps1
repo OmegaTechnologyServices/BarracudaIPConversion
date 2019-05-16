@@ -1,6 +1,6 @@
 # This script will take a formatted .csv file containing an IP address and the CIDR address
 # and output a .txt file you can paste into the Barracuda Email bulk edit client. This is
-# significantly faster than blocking IP addresses on at a time and this script will ensure
+# significantly faster than blocking IP addresses one at a time and this script will ensure
 # the proper format is used to avoid mistakes when entering IP addresses.
 
 # Built by Justin Sherley for use in [COMPANY OMITTED]
