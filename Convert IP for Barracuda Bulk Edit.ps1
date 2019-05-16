@@ -1,4 +1,4 @@
-﻿# This script will take a formatted .csv file containing an IP address and the CIDR address
+# This script will take a formatted .csv file containing an IP address and the CIDR address
 # and output a .txt file you can paste into the Barracuda Email bulk edit client. This is
 # significantly faster than blocking IP addresses on at a time and this script will ensure
 # the proper format is used to avoid mistakes when entering IP addresses.
@@ -19,7 +19,7 @@ $reason = Read-Host "What is the reason for the block?"
 $fullimport = $directory + '\' + $importfile + '.csv'
 $fullexport = $directory + '\' + $exportfile + '.txt'
 
-# Assign CIDR conversion to Subnet Mask variable
+# Assign CIDR conversion to Subnet Mask variable and combine correct Syntax for Barracuda Bulk Edit
 
 $CIDR = Import-Csv -Path $fullimport | Select-Object CIDR,IP | ForEach-Object{
     if( $_.CIDR -like 1 ) { $SubMask = "128.0.0.0"
@@ -119,7 +119,9 @@ $CIDR = Import-Csv -Path $fullimport | Select-Object CIDR,IP | ForEach-Object{
                 $IP = $_.IP + ',' + $SubMask + ',' + 'Block' + ', ' + $Reason + ' ' + $Country + ' (' + $Owner + ')' 
     }
   
- $IP | Out-File -Append $fullexport  
+# Output file to destination path
+
+ $IP | Out-File $fullexport  
 
 }
   
