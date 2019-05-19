@@ -3,7 +3,7 @@
 # significantly faster than blocking IP addresses on at a time and this script will ensure
 # the proper format is used to avoid mistakes when entering IP addresses.
 
-# Built by Justin Sherley for use in [COMPANY OMITTED]
+# Built by Mastodon for use in [COMPANY OMITTED]
 
 # 5/9/2019 | omegatechnologyservices@protonmail.com | https://www.github.com/OmegaTechnologyServices/BarracudaIPConversion
 
